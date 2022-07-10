@@ -109,6 +109,7 @@
     font-weight: 700;
     font-size: 22px;
     margin-bottom: 12px;
+    margin-top: 38px;
     line-height: 1.2;
   }
 
@@ -127,7 +128,7 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 1.8;
-    margin-bottom: 32px;
+    margin-bottom: 20px;
     max-width: 65ch;
   }
 
