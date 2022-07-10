@@ -163,7 +163,7 @@
     margin-right: auto;
   }
 
-  @media (min-width: 778px) {
+  @media (min-width: 672px) {
   main {
     max-width: 778px;
     padding-right: 24px;
