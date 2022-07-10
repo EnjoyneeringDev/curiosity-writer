@@ -85,8 +85,8 @@
     margin: 0 auto;
     padding-top: 72px;
     padding-bottom: 240px;
-    padding-right: 24px;
-    padding-left: 24px;
+    padding-right: 18px;
+    padding-left: 18px;
   }
 
   .curiosity :global(h1) {
@@ -166,6 +166,8 @@
   @media (min-width: 778px) {
   main {
     max-width: 778px;
+    padding-right: 24px;
+    padding-left: 24px;
   }
 
   .curiosity :global(h1) {
