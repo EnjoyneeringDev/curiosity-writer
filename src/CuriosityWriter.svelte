@@ -99,7 +99,7 @@
   .curiosity :global(h2) {
     font-weight: 300;
     color: grey;
-    font-size: 22px;
+    font-size: 24px;
     margin-top: -32px;
     margin-bottom: 32px;
     line-height: 1.4;
@@ -107,7 +107,7 @@
 
   .curiosity :global(h3) {
     font-weight: 700;
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 12px;
     margin-top: 44px;
     line-height: 1.2;
@@ -126,7 +126,7 @@
 
   .curiosity :global(p) {
     font-weight: 300;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.8;
     margin-bottom: 24px;
     max-width: 65ch;
