@@ -99,7 +99,7 @@
   .curiosity :global(h2) {
     font-weight: 300;
     color: grey;
-    font-size: 24px;
+    font-size: 22px;
     margin-top: -32px;
     margin-bottom: 32px;
     line-height: 1.4;
@@ -107,7 +107,7 @@
 
   .curiosity :global(h3) {
     font-weight: 700;
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 12px;
     margin-top: 44px;
     line-height: 1.2;
@@ -126,7 +126,7 @@
 
   .curiosity :global(p) {
     font-weight: 300;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.8;
     margin-bottom: 24px;
     max-width: 65ch;
@@ -166,6 +166,22 @@
   @media (min-width: 778px) {
   main {
     max-width: 778px;
+  }
+
+  .curiosity :global(h1) {
+    font-size: 36px;
+  }
+
+  .curiosity :global(h2) {
+    font-size: 28px;
+  }
+
+  .curiosity :global(h3) {
+    font-size: 26px;
+  }
+
+  .curiosity :global(p) {
+    font-size: 20px;
   }
 }
 </style>
