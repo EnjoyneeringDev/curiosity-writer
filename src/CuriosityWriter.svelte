@@ -2,6 +2,12 @@
   import {createEventDispatcher, onMount, } from "svelte";
   const dispatch = createEventDispatcher();
 
+  import linkIMG from "../public/link.svg"
+  import textBoldIMG from "../public/text-bold.svg"
+  import textItacilIMG from "../public/text-italic.svg"
+  import textIMG from "../public/text.svg"
+  import textSmallIMG from "../public/smallcaps.svg"
+
   export let theme = "dark"
 
   const emptyText = `<h1></br></h1>`
@@ -52,6 +58,24 @@
   <main class:dark = {theme === "dark"} class:light ={theme === "light"} class="curiosity" use:focus use:writingAction bind:innerHTML={html} contenteditable="true">
   </main>
 </section>
+<div class="editor">
+  <div class="action bold">
+    <img src={textBoldIMG} alt="link action">
+  </div>
+  <div class="action italic">
+    <img src={textItacilIMG} alt="link action">
+  </div>
+  <div class="action free"></div>
+  <div class="action header">
+    <img src={textIMG} alt="link action">
+  </div>
+  <div class="action text">
+    <img src={textSmallIMG} alt="link action">
+  </div>
+  <div class="action link">
+    <img src={linkIMG} alt="link action">
+  </div>
+</div>
 
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&display=swap");
@@ -66,6 +90,34 @@
   :global(body) {
     background-color: #1B1B1D;
   }
+
+  /* for editor */
+  .editor {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #242526;
+    height: 28px;
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .action {
+    height: 100%;
+    flex-grow: 1;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .action img {
+    height: 18px;
+  }
+  /* for editor */
 
   section {
     font-family: "Lexend", sans-serif;
@@ -189,6 +241,10 @@
   .curiosity :global(p) {
     font-size: 20px;
     line-height: 1.9;
+  }
+
+  .editor {
+    display: none;
   }
 }
 </style>
