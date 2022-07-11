@@ -109,7 +109,7 @@
     font-weight: 700;
     font-size: 20px;
     margin-bottom: 12px;
-    margin-top: 44px;
+    margin-top: 48px;
     line-height: 1.2;
   }
 
@@ -182,8 +182,13 @@
     font-size: 26px;
   }
 
+  .curiosity :global(h4) {
+    font-size: 18px;
+  }
+
   .curiosity :global(p) {
     font-size: 20px;
+    line-height: 1.9;
   }
 }
 </style>
