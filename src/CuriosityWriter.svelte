@@ -54,6 +54,7 @@
   function actionBold() {
     document.execCommand("bold", false);
   }
+  
   function actionItalic() {
     document.execCommand("italic", false);
   }
