@@ -51,6 +51,22 @@
     element.focus()
   }
 
+  function actionBold() {
+    document.execCommand("bold", false);
+  }
+  function actionItalic() {
+    document.execCommand("italic", false);
+  }
+  function actionHeader() {
+    document.execCommand("formatBlock", false, "h3");
+  }
+  function actionText() {
+    document.execCommand("formatBlock", false, "p");
+  }
+  function actionLink() {
+    const url = prompt("Insert your link");
+    document.execCommand("createLink", true, url);
+  }
 
 </script>
 
@@ -58,21 +74,22 @@
   <main class:dark = {theme === "dark"} class:light ={theme === "light"} class="curiosity" use:focus use:writingAction bind:innerHTML={html} contenteditable="true">
   </main>
 </section>
+
 <div class="editor">
-  <div class="action bold">
+  <div on:click|preventDefault={actionBold} class="action bold">
     <img src={textBoldIMG} alt="link action">
   </div>
-  <div class="action italic">
-    <img src={textItacilIMG} alt="link action">
+  <div on:click|preventDefault={actionItalic} class="action italic">
+    <img src={textItacilIMG} alt="italic action">
   </div>
   <div class="action free"></div>
-  <div class="action header">
-    <img src={textIMG} alt="link action">
+  <div on:click|preventDefault={actionHeader} class="action header">
+    <img src={textIMG} alt="header action">
   </div>
-  <div class="action text">
-    <img src={textSmallIMG} alt="link action">
+  <div on:click|preventDefault={actionText} class="action text">
+    <img src={textSmallIMG} alt="text action">
   </div>
-  <div class="action link">
+  <div on:click|preventDefault={actionLink} class="action link">
     <img src={linkIMG} alt="link action">
   </div>
 </div>
@@ -112,6 +129,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 32px;
+  }
+
+  .action:active {
+    background-color: #25C19F;
   }
 
   .action img {
