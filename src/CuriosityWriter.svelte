@@ -8,8 +8,6 @@
   import textIMG from "../public/text.svg"
   import textSmallIMG from "../public/smallcaps.svg"
 
-  export let theme = "dark"
-
   const emptyText = `<h1></br></h1>`
   let html = emptyText
   $: if(html.length === 0) html = emptyText
@@ -72,7 +70,7 @@
 </script>
 
 <section>
-  <main class:dark = {theme === "dark"} class:light ={theme === "light"} class="curiosity" use:focus use:writingAction bind:innerHTML={html} contenteditable="true">
+  <main class="curiosity" use:focus use:writingAction bind:innerHTML={html} contenteditable="true">
   </main>
 </section>
 
@@ -144,16 +142,8 @@
 
   section {
     font-family: "Lexend", sans-serif;
-  }
-
-  .dark {
     background-color: #1B1B1D;
     color: #E3E3E3;
-  }
-
-  .light {
-    background-color: #FFFFFF;
-    color: #1C1E21;
   }
 
   main {
@@ -166,7 +156,7 @@
 
   .curiosity :global(h1) {
     font-weight: 700;
-    font-size: 32px;
+    font-size: 30px;
     margin-bottom: 40px;
     line-height: 1.3;
   }
