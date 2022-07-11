@@ -98,7 +98,7 @@
     left: 0;
     right: 0;
     background-color: #242526;
-    height: 28px;
+    height: 32px;
     display: flex;
     justify-content:space-between ;
     align-items: center;
