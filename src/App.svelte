@@ -7,13 +7,13 @@ import { onMount } from "svelte";
 
   function handleType(e) {
     console.log(e.detail)
-    doc = e.detail
+    localStorage.setItem("doc", e.detail)
+    console.log("LS:  " + localStorage.getItem("doc"))
   }
-
 
   onMount(() => {
     const docLS = localStorage.getItem("doc")
-    if(doc) {
+    if(docLS) {
       doc = docLS
     }
   })
