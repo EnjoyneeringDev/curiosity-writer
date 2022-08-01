@@ -50,8 +50,7 @@
 
   function actionBold() {
     document.execCommand("bold", false);
-  }
-  
+  } 
   function actionItalic() {
     document.execCommand("italic", false);
   }
@@ -66,10 +65,12 @@
     document.execCommand("createLink", true, url);
   }
 
+  $: isPlaceholderShouldShow = html === emptyText || html === "<h1><br></h1>"
+
 </script>
 
 <section>
-  <main class="curiosity" use:focus use:writingAction bind:innerHTML={html} contenteditable="true">
+  <main class="curiosity" use:focus use:writingAction bind:innerHTML={html} class:placeholder={isPlaceholderShouldShow} contenteditable="true">
     {html}
   </main>
 </section>
@@ -128,6 +129,15 @@
   :global(body) {
     background-color: #1B1B1D;
   }
+
+  .placeholder::before {
+    content: "Write your story";
+    font-weight: 700;
+    font-size: 30px;
+    opacity: 0.3;
+    position: absolute;
+  }
+
 
   /* for editor */
   .editor {
@@ -255,6 +265,11 @@
     max-width: 778px;
     padding-right: 24px;
     padding-left: 24px;
+  }
+
+  .placeholder::before {
+    content: "Write your story";
+    font-size: 36px;
   }
 
   .curiosity :global(h1) {
