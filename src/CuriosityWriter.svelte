@@ -4,9 +4,10 @@
   const dispatch = createEventDispatcher();
   const component = get_current_component()
 
-  const emptyText = `<h1></br></h1>`
+  const emptyText = `<h1><br></h1>`
   export let html = emptyText
   $: if(html.length === 0) html = emptyText
+
 
   $: dispatchEvent = (name, detail) => {
     dispatch(name, detail)
@@ -65,7 +66,7 @@
     document.execCommand("createLink", true, url);
   }
 
-  $: isPlaceholderShouldShow = html === emptyText || html === "<h1><br></h1>"
+  $: isPlaceholderShouldShow = html === emptyText
 
 </script>
 
